@@ -4,3 +4,5 @@ I've got this bot from https://www.kickstarter.com/projects/digistump/digispark-
 It was a gift for my kids, they have assembled it and I made this controller app.
 
 ![Robot](https://github.com/Miirek/BLEBot/blob/master/blebot.JPG)
+
+![Screenshot](https://github.com/Miirek/BLEBot/blob/master/bot_app_ss.png)
