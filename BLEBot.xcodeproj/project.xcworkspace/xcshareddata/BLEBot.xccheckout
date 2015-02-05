@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5E684206-F9A8-42E3-9463-A3CCE242E372</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BLEBot</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A715A33BAA8BC9A4FB6FF0519273F5641E2A103A</key>
+		<string>https://github.com/Miirek/BLEBot.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BLEBot.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A715A33BAA8BC9A4FB6FF0519273F5641E2A103A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Miirek/BLEBot.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A715A33BAA8BC9A4FB6FF0519273F5641E2A103A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A715A33BAA8BC9A4FB6FF0519273F5641E2A103A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BLEBot</string>
+		</dict>
+	</array>
+</dict>
+</plist>
