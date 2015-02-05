@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  BLEBot
+
+  Created by Mirek Novák on 04.02.15.
+  Copyright (c) 2015 mirek.novak. All rights reserved.
+*/
+"devState.disconnected"="odpojeno";

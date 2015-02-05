@@ -1,0 +1,658 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EBE6DCCE1A7FD68300D886DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE6DCCD1A7FD68300D886DB /* main.m */; };
+		EBE6DCD11A7FD68300D886DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE6DCD01A7FD68300D886DB /* AppDelegate.m */; };
+		EBE6DCD41A7FD68300D886DB /* RobotController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE6DCD31A7FD68300D886DB /* RobotController.m */; };
+		EBE6DCD71A7FD68300D886DB /* DevicesController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE6DCD61A7FD68300D886DB /* DevicesController.m */; };
+		EBE6DCDA1A7FD68300D886DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DCD81A7FD68300D886DB /* Main.storyboard */; };
+		EBE6DCDC1A7FD68300D886DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DCDB1A7FD68300D886DB /* Images.xcassets */; };
+		EBE6DCDF1A7FD68300D886DB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DCDD1A7FD68300D886DB /* LaunchScreen.xib */; };
+		EBE6DCEB1A7FD68400D886DB /* BLEBotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE6DCEA1A7FD68400D886DB /* BLEBotTests.m */; };
+		EBE6DCF61A8238DD00D886DB /* F3BarGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE6DCF51A8238DD00D886DB /* F3BarGauge.m */; };
+		EBE6DD2A1A82393800D886DB /* analogue_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DCF91A82393800D886DB /* analogue_bg.png */; };
+		EBE6DD2B1A82393800D886DB /* analogue_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DCFA1A82393800D886DB /* analogue_bg@2x.png */; };
+		EBE6DD2C1A82393800D886DB /* analogue_handle.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DCFB1A82393800D886DB /* analogue_handle.png */; };
+		EBE6DD2D1A82393800D886DB /* analogue_handle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DCFC1A82393800D886DB /* analogue_handle@2x.png */; };
+		EBE6DD2E1A82393800D886DB /* button-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DCFD1A82393800D886DB /* button-pressed.png */; };
+		EBE6DD2F1A82393800D886DB /* button-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DCFE1A82393800D886DB /* button-pressed@2x.png */; };
+		EBE6DD301A82393800D886DB /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DCFF1A82393800D886DB /* button.png */; };
+		EBE6DD311A82393800D886DB /* button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD001A82393800D886DB /* button@2x.png */; };
+		EBE6DD321A82393800D886DB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD011A82393800D886DB /* Default-568h@2x.png */; };
+		EBE6DD331A82393800D886DB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD021A82393800D886DB /* Default.png */; };
+		EBE6DD341A82393800D886DB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD031A82393800D886DB /* Default@2x.png */; };
+		EBE6DD351A82393800D886DB /* dPad-Down.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD041A82393800D886DB /* dPad-Down.png */; };
+		EBE6DD361A82393800D886DB /* dPad-Down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD051A82393800D886DB /* dPad-Down@2x.png */; };
+		EBE6DD371A82393800D886DB /* dPad-DownLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD061A82393800D886DB /* dPad-DownLeft.png */; };
+		EBE6DD381A82393800D886DB /* dPad-DownLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD071A82393800D886DB /* dPad-DownLeft@2x.png */; };
+		EBE6DD391A82393800D886DB /* dPad-DownRight.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD081A82393800D886DB /* dPad-DownRight.png */; };
+		EBE6DD3A1A82393800D886DB /* dPad-DownRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD091A82393800D886DB /* dPad-DownRight@2x.png */; };
+		EBE6DD3B1A82393800D886DB /* dPad-Left.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD0A1A82393800D886DB /* dPad-Left.png */; };
+		EBE6DD3C1A82393800D886DB /* dPad-Left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD0B1A82393800D886DB /* dPad-Left@2x.png */; };
+		EBE6DD3D1A82393800D886DB /* dPad-None.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD0C1A82393800D886DB /* dPad-None.png */; };
+		EBE6DD3E1A82393800D886DB /* dPad-None@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD0D1A82393800D886DB /* dPad-None@2x.png */; };
+		EBE6DD3F1A82393800D886DB /* dPad-Right.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD0E1A82393800D886DB /* dPad-Right.png */; };
+		EBE6DD401A82393800D886DB /* dPad-Right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD0F1A82393800D886DB /* dPad-Right@2x.png */; };
+		EBE6DD411A82393800D886DB /* dPad-Up.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD101A82393800D886DB /* dPad-Up.png */; };
+		EBE6DD421A82393800D886DB /* dPad-Up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD111A82393800D886DB /* dPad-Up@2x.png */; };
+		EBE6DD431A82393800D886DB /* dPad-UpLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD121A82393800D886DB /* dPad-UpLeft.png */; };
+		EBE6DD441A82393800D886DB /* dPad-UpLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD131A82393800D886DB /* dPad-UpLeft@2x.png */; };
+		EBE6DD451A82393800D886DB /* dPad-UpRight.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD141A82393800D886DB /* dPad-UpRight.png */; };
+		EBE6DD461A82393800D886DB /* dPad-UpRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD151A82393800D886DB /* dPad-UpRight@2x.png */; };
+		EBE6DD491A82393800D886DB /* Gameboy-landscape.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD1A1A82393800D886DB /* Gameboy-landscape.plist */; };
+		EBE6DD4A1A82393800D886DB /* JSAnalogueStick.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE6DD1C1A82393800D886DB /* JSAnalogueStick.m */; };
+		EBE6DD4C1A82393800D886DB /* JSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE6DD201A82393800D886DB /* JSButton.m */; };
+		EBE6DD4D1A82393800D886DB /* JSControlLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE6DD221A82393800D886DB /* JSControlLayout.m */; };
+		EBE6DD4F1A82393800D886DB /* JSDPad.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE6DD261A82393800D886DB /* JSDPad.m */; };
+		EBE6DD501A82393800D886DB /* JSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE6DD281A82393800D886DB /* JSViewController.m */; };
+		EBE6DD531A826ACC00D886DB /* blutooth.icns in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD521A826ACC00D886DB /* blutooth.icns */; };
+		EBE6DD551A826B0600D886DB /* bot.icns in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD541A826B0600D886DB /* bot.icns */; };
+		EBE6DD591A826C1700D886DB /* bluetooth.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD581A826C1700D886DB /* bluetooth.png */; };
+		EBE6DD601A827A4F00D886DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD621A827A4F00D886DB /* Localizable.strings */; };
+		EBE6DD991A839E5D00D886DB /* RecorderStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE6DD981A839E5D00D886DB /* RecorderStorage.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBE6DCE51A7FD68400D886DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBE6DCC01A7FD68300D886DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBE6DCC71A7FD68300D886DB;
+			remoteInfo = BLEBot;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EBE6DCC81A7FD68300D886DB /* BLEBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLEBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE6DCCC1A7FD68300D886DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBE6DCCD1A7FD68300D886DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EBE6DCCF1A7FD68300D886DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EBE6DCD01A7FD68300D886DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EBE6DCD21A7FD68300D886DB /* RobotController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RobotController.h; sourceTree = "<group>"; };
+		EBE6DCD31A7FD68300D886DB /* RobotController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RobotController.m; sourceTree = "<group>"; };
+		EBE6DCD51A7FD68300D886DB /* DevicesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DevicesController.h; sourceTree = "<group>"; };
+		EBE6DCD61A7FD68300D886DB /* DevicesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DevicesController.m; sourceTree = "<group>"; };
+		EBE6DCD91A7FD68300D886DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EBE6DCDB1A7FD68300D886DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EBE6DCDE1A7FD68300D886DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EBE6DCE41A7FD68400D886DB /* BLEBotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLEBotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE6DCE91A7FD68400D886DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBE6DCEA1A7FD68400D886DB /* BLEBotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEBotTests.m; sourceTree = "<group>"; };
+		EBE6DCF41A8238DD00D886DB /* F3BarGauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3BarGauge.h; sourceTree = "<group>"; };
+		EBE6DCF51A8238DD00D886DB /* F3BarGauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3BarGauge.m; sourceTree = "<group>"; };
+		EBE6DCF91A82393800D886DB /* analogue_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = analogue_bg.png; sourceTree = "<group>"; };
+		EBE6DCFA1A82393800D886DB /* analogue_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "analogue_bg@2x.png"; sourceTree = "<group>"; };
+		EBE6DCFB1A82393800D886DB /* analogue_handle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = analogue_handle.png; sourceTree = "<group>"; };
+		EBE6DCFC1A82393800D886DB /* analogue_handle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "analogue_handle@2x.png"; sourceTree = "<group>"; };
+		EBE6DCFD1A82393800D886DB /* button-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-pressed.png"; sourceTree = "<group>"; };
+		EBE6DCFE1A82393800D886DB /* button-pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-pressed@2x.png"; sourceTree = "<group>"; };
+		EBE6DCFF1A82393800D886DB /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		EBE6DD001A82393800D886DB /* button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button@2x.png"; sourceTree = "<group>"; };
+		EBE6DD011A82393800D886DB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		EBE6DD021A82393800D886DB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		EBE6DD031A82393800D886DB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		EBE6DD041A82393800D886DB /* dPad-Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-Down.png"; sourceTree = "<group>"; };
+		EBE6DD051A82393800D886DB /* dPad-Down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-Down@2x.png"; sourceTree = "<group>"; };
+		EBE6DD061A82393800D886DB /* dPad-DownLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-DownLeft.png"; sourceTree = "<group>"; };
+		EBE6DD071A82393800D886DB /* dPad-DownLeft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-DownLeft@2x.png"; sourceTree = "<group>"; };
+		EBE6DD081A82393800D886DB /* dPad-DownRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-DownRight.png"; sourceTree = "<group>"; };
+		EBE6DD091A82393800D886DB /* dPad-DownRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-DownRight@2x.png"; sourceTree = "<group>"; };
+		EBE6DD0A1A82393800D886DB /* dPad-Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-Left.png"; sourceTree = "<group>"; };
+		EBE6DD0B1A82393800D886DB /* dPad-Left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-Left@2x.png"; sourceTree = "<group>"; };
+		EBE6DD0C1A82393800D886DB /* dPad-None.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-None.png"; sourceTree = "<group>"; };
+		EBE6DD0D1A82393800D886DB /* dPad-None@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-None@2x.png"; sourceTree = "<group>"; };
+		EBE6DD0E1A82393800D886DB /* dPad-Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-Right.png"; sourceTree = "<group>"; };
+		EBE6DD0F1A82393800D886DB /* dPad-Right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-Right@2x.png"; sourceTree = "<group>"; };
+		EBE6DD101A82393800D886DB /* dPad-Up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-Up.png"; sourceTree = "<group>"; };
+		EBE6DD111A82393800D886DB /* dPad-Up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-Up@2x.png"; sourceTree = "<group>"; };
+		EBE6DD121A82393800D886DB /* dPad-UpLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-UpLeft.png"; sourceTree = "<group>"; };
+		EBE6DD131A82393800D886DB /* dPad-UpLeft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-UpLeft@2x.png"; sourceTree = "<group>"; };
+		EBE6DD141A82393800D886DB /* dPad-UpRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-UpRight.png"; sourceTree = "<group>"; };
+		EBE6DD151A82393800D886DB /* dPad-UpRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dPad-UpRight@2x.png"; sourceTree = "<group>"; };
+		EBE6DD1A1A82393800D886DB /* Gameboy-landscape.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Gameboy-landscape.plist"; sourceTree = "<group>"; };
+		EBE6DD1B1A82393800D886DB /* JSAnalogueStick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAnalogueStick.h; sourceTree = "<group>"; };
+		EBE6DD1C1A82393800D886DB /* JSAnalogueStick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAnalogueStick.m; sourceTree = "<group>"; };
+		EBE6DD1F1A82393800D886DB /* JSButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSButton.h; sourceTree = "<group>"; };
+		EBE6DD201A82393800D886DB /* JSButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSButton.m; sourceTree = "<group>"; };
+		EBE6DD211A82393800D886DB /* JSControlLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSControlLayout.h; sourceTree = "<group>"; };
+		EBE6DD221A82393800D886DB /* JSControlLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSControlLayout.m; sourceTree = "<group>"; };
+		EBE6DD241A82393800D886DB /* JSController-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSController-Prefix.pch"; sourceTree = "<group>"; };
+		EBE6DD251A82393800D886DB /* JSDPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDPad.h; sourceTree = "<group>"; };
+		EBE6DD261A82393800D886DB /* JSDPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDPad.m; sourceTree = "<group>"; };
+		EBE6DD271A82393800D886DB /* JSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSViewController.h; sourceTree = "<group>"; };
+		EBE6DD281A82393800D886DB /* JSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSViewController.m; sourceTree = "<group>"; };
+		EBE6DD521A826ACC00D886DB /* blutooth.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = blutooth.icns; sourceTree = "<group>"; };
+		EBE6DD541A826B0600D886DB /* bot.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = bot.icns; sourceTree = "<group>"; };
+		EBE6DD581A826C1700D886DB /* bluetooth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluetooth.png; sourceTree = "<group>"; };
+		EBE6DD5B1A82780000D886DB /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		EBE6DD611A827A4F00D886DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EBE6DD631A827A5600D886DB /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EBE6DD641A827ADF00D886DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EBE6DD971A839E5D00D886DB /* RecorderStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecorderStorage.h; sourceTree = "<group>"; };
+		EBE6DD981A839E5D00D886DB /* RecorderStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecorderStorage.m; sourceTree = "<group>"; };
+		EBE6DD9B1A83A8D100D886DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		EBE6DD9C1A83A8DC00D886DB /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Main.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EBE6DCC51A7FD68300D886DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE6DCE11A7FD68400D886DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EBE6DCBF1A7FD68300D886DB = {
+			isa = PBXGroup;
+			children = (
+				EBE6DCCA1A7FD68300D886DB /* BLEBot */,
+				EBE6DCE71A7FD68400D886DB /* BLEBotTests */,
+				EBE6DCC91A7FD68300D886DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EBE6DCC91A7FD68300D886DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBE6DCC81A7FD68300D886DB /* BLEBot.app */,
+				EBE6DCE41A7FD68400D886DB /* BLEBotTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBE6DCCA1A7FD68300D886DB /* BLEBot */ = {
+			isa = PBXGroup;
+			children = (
+				EBE6DCF71A8238F300D886DB /* Joystick */,
+				EBE6DCCF1A7FD68300D886DB /* AppDelegate.h */,
+				EBE6DCD01A7FD68300D886DB /* AppDelegate.m */,
+				EBE6DCD21A7FD68300D886DB /* RobotController.h */,
+				EBE6DCD31A7FD68300D886DB /* RobotController.m */,
+				EBE6DCD51A7FD68300D886DB /* DevicesController.h */,
+				EBE6DCD61A7FD68300D886DB /* DevicesController.m */,
+				EBE6DCF41A8238DD00D886DB /* F3BarGauge.h */,
+				EBE6DCF51A8238DD00D886DB /* F3BarGauge.m */,
+				EBE6DCD81A7FD68300D886DB /* Main.storyboard */,
+				EBE6DCDB1A7FD68300D886DB /* Images.xcassets */,
+				EBE6DCDD1A7FD68300D886DB /* LaunchScreen.xib */,
+				EBE6DCCB1A7FD68300D886DB /* Supporting Files */,
+				EBE6DD971A839E5D00D886DB /* RecorderStorage.h */,
+				EBE6DD981A839E5D00D886DB /* RecorderStorage.m */,
+			);
+			path = BLEBot;
+			sourceTree = "<group>";
+		};
+		EBE6DCCB1A7FD68300D886DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBE6DD581A826C1700D886DB /* bluetooth.png */,
+				EBE6DD541A826B0600D886DB /* bot.icns */,
+				EBE6DD521A826ACC00D886DB /* blutooth.icns */,
+				EBE6DCCC1A7FD68300D886DB /* Info.plist */,
+				EBE6DCCD1A7FD68300D886DB /* main.m */,
+				EBE6DD621A827A4F00D886DB /* Localizable.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBE6DCE71A7FD68400D886DB /* BLEBotTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBE6DCEA1A7FD68400D886DB /* BLEBotTests.m */,
+				EBE6DCE81A7FD68400D886DB /* Supporting Files */,
+			);
+			path = BLEBotTests;
+			sourceTree = "<group>";
+		};
+		EBE6DCE81A7FD68400D886DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBE6DCE91A7FD68400D886DB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBE6DCF71A8238F300D886DB /* Joystick */ = {
+			isa = PBXGroup;
+			children = (
+				EBE6DCF81A82393800D886DB /* Controller */,
+			);
+			name = Joystick;
+			sourceTree = "<group>";
+		};
+		EBE6DCF81A82393800D886DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EBE6DD9D1A83AA3500D886DB /* Graphics */,
+				EBE6DD1A1A82393800D886DB /* Gameboy-landscape.plist */,
+				EBE6DD1B1A82393800D886DB /* JSAnalogueStick.h */,
+				EBE6DD1C1A82393800D886DB /* JSAnalogueStick.m */,
+				EBE6DD1F1A82393800D886DB /* JSButton.h */,
+				EBE6DD201A82393800D886DB /* JSButton.m */,
+				EBE6DD211A82393800D886DB /* JSControlLayout.h */,
+				EBE6DD221A82393800D886DB /* JSControlLayout.m */,
+				EBE6DD241A82393800D886DB /* JSController-Prefix.pch */,
+				EBE6DD251A82393800D886DB /* JSDPad.h */,
+				EBE6DD261A82393800D886DB /* JSDPad.m */,
+				EBE6DD271A82393800D886DB /* JSViewController.h */,
+				EBE6DD281A82393800D886DB /* JSViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EBE6DD9D1A83AA3500D886DB /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				EBE6DCF91A82393800D886DB /* analogue_bg.png */,
+				EBE6DCFA1A82393800D886DB /* analogue_bg@2x.png */,
+				EBE6DCFB1A82393800D886DB /* analogue_handle.png */,
+				EBE6DCFC1A82393800D886DB /* analogue_handle@2x.png */,
+				EBE6DCFD1A82393800D886DB /* button-pressed.png */,
+				EBE6DCFE1A82393800D886DB /* button-pressed@2x.png */,
+				EBE6DCFF1A82393800D886DB /* button.png */,
+				EBE6DD001A82393800D886DB /* button@2x.png */,
+				EBE6DD011A82393800D886DB /* Default-568h@2x.png */,
+				EBE6DD021A82393800D886DB /* Default.png */,
+				EBE6DD031A82393800D886DB /* Default@2x.png */,
+				EBE6DD041A82393800D886DB /* dPad-Down.png */,
+				EBE6DD051A82393800D886DB /* dPad-Down@2x.png */,
+				EBE6DD061A82393800D886DB /* dPad-DownLeft.png */,
+				EBE6DD071A82393800D886DB /* dPad-DownLeft@2x.png */,
+				EBE6DD081A82393800D886DB /* dPad-DownRight.png */,
+				EBE6DD091A82393800D886DB /* dPad-DownRight@2x.png */,
+				EBE6DD0A1A82393800D886DB /* dPad-Left.png */,
+				EBE6DD0B1A82393800D886DB /* dPad-Left@2x.png */,
+				EBE6DD0C1A82393800D886DB /* dPad-None.png */,
+				EBE6DD0D1A82393800D886DB /* dPad-None@2x.png */,
+				EBE6DD0E1A82393800D886DB /* dPad-Right.png */,
+				EBE6DD0F1A82393800D886DB /* dPad-Right@2x.png */,
+				EBE6DD101A82393800D886DB /* dPad-Up.png */,
+				EBE6DD111A82393800D886DB /* dPad-Up@2x.png */,
+				EBE6DD121A82393800D886DB /* dPad-UpLeft.png */,
+				EBE6DD131A82393800D886DB /* dPad-UpLeft@2x.png */,
+				EBE6DD141A82393800D886DB /* dPad-UpRight.png */,
+				EBE6DD151A82393800D886DB /* dPad-UpRight@2x.png */,
+			);
+			name = Graphics;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBE6DCC71A7FD68300D886DB /* BLEBot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBE6DCEE1A7FD68400D886DB /* Build configuration list for PBXNativeTarget "BLEBot" */;
+			buildPhases = (
+				EBE6DCC41A7FD68300D886DB /* Sources */,
+				EBE6DCC51A7FD68300D886DB /* Frameworks */,
+				EBE6DCC61A7FD68300D886DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BLEBot;
+			productName = BLEBot;
+			productReference = EBE6DCC81A7FD68300D886DB /* BLEBot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EBE6DCE31A7FD68400D886DB /* BLEBotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBE6DCF11A7FD68400D886DB /* Build configuration list for PBXNativeTarget "BLEBotTests" */;
+			buildPhases = (
+				EBE6DCE01A7FD68400D886DB /* Sources */,
+				EBE6DCE11A7FD68400D886DB /* Frameworks */,
+				EBE6DCE21A7FD68400D886DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBE6DCE61A7FD68400D886DB /* PBXTargetDependency */,
+			);
+			name = BLEBotTests;
+			productName = BLEBotTests;
+			productReference = EBE6DCE41A7FD68400D886DB /* BLEBotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBE6DCC01A7FD68300D886DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = mirek.novak;
+				TargetAttributes = {
+					EBE6DCC71A7FD68300D886DB = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					EBE6DCE31A7FD68400D886DB = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = EBE6DCC71A7FD68300D886DB;
+					};
+				};
+			};
+			buildConfigurationList = EBE6DCC31A7FD68300D886DB /* Build configuration list for PBXProject "BLEBot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				cs,
+			);
+			mainGroup = EBE6DCBF1A7FD68300D886DB;
+			productRefGroup = EBE6DCC91A7FD68300D886DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBE6DCC71A7FD68300D886DB /* BLEBot */,
+				EBE6DCE31A7FD68400D886DB /* BLEBotTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBE6DCC61A7FD68300D886DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBE6DD3D1A82393800D886DB /* dPad-None.png in Resources */,
+				EBE6DCDA1A7FD68300D886DB /* Main.storyboard in Resources */,
+				EBE6DD301A82393800D886DB /* button.png in Resources */,
+				EBE6DD2B1A82393800D886DB /* analogue_bg@2x.png in Resources */,
+				EBE6DD2D1A82393800D886DB /* analogue_handle@2x.png in Resources */,
+				EBE6DCDF1A7FD68300D886DB /* LaunchScreen.xib in Resources */,
+				EBE6DD321A82393800D886DB /* Default-568h@2x.png in Resources */,
+				EBE6DD3A1A82393800D886DB /* dPad-DownRight@2x.png in Resources */,
+				EBE6DD401A82393800D886DB /* dPad-Right@2x.png in Resources */,
+				EBE6DD601A827A4F00D886DB /* Localizable.strings in Resources */,
+				EBE6DD371A82393800D886DB /* dPad-DownLeft.png in Resources */,
+				EBE6DD311A82393800D886DB /* button@2x.png in Resources */,
+				EBE6DD331A82393800D886DB /* Default.png in Resources */,
+				EBE6DD2E1A82393800D886DB /* button-pressed.png in Resources */,
+				EBE6DD391A82393800D886DB /* dPad-DownRight.png in Resources */,
+				EBE6DD531A826ACC00D886DB /* blutooth.icns in Resources */,
+				EBE6DD421A82393800D886DB /* dPad-Up@2x.png in Resources */,
+				EBE6DD2A1A82393800D886DB /* analogue_bg.png in Resources */,
+				EBE6DD2F1A82393800D886DB /* button-pressed@2x.png in Resources */,
+				EBE6DD361A82393800D886DB /* dPad-Down@2x.png in Resources */,
+				EBE6DCDC1A7FD68300D886DB /* Images.xcassets in Resources */,
+				EBE6DD451A82393800D886DB /* dPad-UpRight.png in Resources */,
+				EBE6DD3B1A82393800D886DB /* dPad-Left.png in Resources */,
+				EBE6DD341A82393800D886DB /* Default@2x.png in Resources */,
+				EBE6DD441A82393800D886DB /* dPad-UpLeft@2x.png in Resources */,
+				EBE6DD431A82393800D886DB /* dPad-UpLeft.png in Resources */,
+				EBE6DD3E1A82393800D886DB /* dPad-None@2x.png in Resources */,
+				EBE6DD551A826B0600D886DB /* bot.icns in Resources */,
+				EBE6DD491A82393800D886DB /* Gameboy-landscape.plist in Resources */,
+				EBE6DD461A82393800D886DB /* dPad-UpRight@2x.png in Resources */,
+				EBE6DD2C1A82393800D886DB /* analogue_handle.png in Resources */,
+				EBE6DD381A82393800D886DB /* dPad-DownLeft@2x.png in Resources */,
+				EBE6DD3C1A82393800D886DB /* dPad-Left@2x.png in Resources */,
+				EBE6DD351A82393800D886DB /* dPad-Down.png in Resources */,
+				EBE6DD3F1A82393800D886DB /* dPad-Right.png in Resources */,
+				EBE6DD591A826C1700D886DB /* bluetooth.png in Resources */,
+				EBE6DD411A82393800D886DB /* dPad-Up.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE6DCE21A7FD68400D886DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBE6DCC41A7FD68300D886DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBE6DCD71A7FD68300D886DB /* DevicesController.m in Sources */,
+				EBE6DCF61A8238DD00D886DB /* F3BarGauge.m in Sources */,
+				EBE6DD4F1A82393800D886DB /* JSDPad.m in Sources */,
+				EBE6DCD11A7FD68300D886DB /* AppDelegate.m in Sources */,
+				EBE6DD4D1A82393800D886DB /* JSControlLayout.m in Sources */,
+				EBE6DD501A82393800D886DB /* JSViewController.m in Sources */,
+				EBE6DD4A1A82393800D886DB /* JSAnalogueStick.m in Sources */,
+				EBE6DCD41A7FD68300D886DB /* RobotController.m in Sources */,
+				EBE6DD991A839E5D00D886DB /* RecorderStorage.m in Sources */,
+				EBE6DD4C1A82393800D886DB /* JSButton.m in Sources */,
+				EBE6DCCE1A7FD68300D886DB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE6DCE01A7FD68400D886DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBE6DCEB1A7FD68400D886DB /* BLEBotTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBE6DCE61A7FD68400D886DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBE6DCC71A7FD68300D886DB /* BLEBot */;
+			targetProxy = EBE6DCE51A7FD68400D886DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EBE6DCD81A7FD68300D886DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBE6DCD91A7FD68300D886DB /* Base */,
+				EBE6DD9B1A83A8D100D886DB /* en */,
+				EBE6DD9C1A83A8DC00D886DB /* cs */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EBE6DCDD1A7FD68300D886DB /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBE6DCDE1A7FD68300D886DB /* Base */,
+				EBE6DD5B1A82780000D886DB /* cs */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		EBE6DD621A827A4F00D886DB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBE6DD611A827A4F00D886DB /* Base */,
+				EBE6DD631A827A5600D886DB /* cs */,
+				EBE6DD641A827ADF00D886DB /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EBE6DCEC1A7FD68400D886DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EBE6DCED1A7FD68400D886DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EBE6DCEF1A7FD68400D886DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BLEBot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EBE6DCF01A7FD68400D886DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BLEBot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EBE6DCF21A7FD68400D886DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BLEBotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BLEBot.app/BLEBot";
+			};
+			name = Debug;
+		};
+		EBE6DCF31A7FD68400D886DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BLEBotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BLEBot.app/BLEBot";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBE6DCC31A7FD68300D886DB /* Build configuration list for PBXProject "BLEBot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBE6DCEC1A7FD68400D886DB /* Debug */,
+				EBE6DCED1A7FD68400D886DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBE6DCEE1A7FD68400D886DB /* Build configuration list for PBXNativeTarget "BLEBot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBE6DCEF1A7FD68400D886DB /* Debug */,
+				EBE6DCF01A7FD68400D886DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EBE6DCF11A7FD68400D886DB /* Build configuration list for PBXNativeTarget "BLEBotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBE6DCF21A7FD68400D886DB /* Debug */,
+				EBE6DCF31A7FD68400D886DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EBE6DCC01A7FD68300D886DB /* Project object */;
+}

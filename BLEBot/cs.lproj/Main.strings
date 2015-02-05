@@ -1,0 +1,39 @@
+
+/* Class = "IBUILabel"; text = "not connected"; ObjectID = "Po5-R4-F6R"; */
+"Po5-R4-F6R.text" = "nepřipojeno";
+
+/* Class = "IBUITabBarItem"; title = "Robot control"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "Ovládání robota";
+
+/* Class = "IBUITabBarItem"; title = "Devices"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "Roboti v okolí";
+
+/* Class = "IBUILabel"; text = "0"; ObjectID = "0nW-b6-5tO"; */
+"0nW-b6-5tO.text" = "0";
+
+/* Class = "IBUILabel"; text = "Duration:"; ObjectID = "5BE-XP-IUH"; */
+"5BE-XP-IUH.text" = "Trvání:";
+
+/* Class = "IBUITabBarItem"; title = "Recorded tracks"; ObjectID = "Ksu-vF-8Lq"; */
+"Ksu-vF-8Lq.title" = "Uložené cesty";
+
+/* Class = "IBUILabel"; text = "00:00:00.00"; ObjectID = "bvY-ac-0yt"; */
+"bvY-ac-0yt.text" = "00:00:00.00";
+
+/* Class = "IBUILabel"; text = "Records:"; ObjectID = "duT-d9-baj"; */
+"duT-d9-baj.text" = "Kroky:";
+
+/* Class = "IBUISegmentedControl"; o1n-Is-NGk.segmentTitles[0] = "REC"; ObjectID = "o1n-Is-NGk"; */
+"o1n-Is-NGk.segmentTitles[0]" = "REC";
+
+/* Class = "IBUISegmentedControl"; o1n-Is-NGk.segmentTitles[1] = "STOP"; ObjectID = "o1n-Is-NGk"; */
+"o1n-Is-NGk.segmentTitles[1]" = "STOP";
+
+/* Class = "IBUISegmentedControl"; o1n-Is-NGk.segmentTitles[2] = "CLEAR"; ObjectID = "o1n-Is-NGk"; */
+"o1n-Is-NGk.segmentTitles[2]" = "CLEAR";
+
+/* Class = "IBUISegmentedControl"; o1n-Is-NGk.segmentTitles[3] = "PLAY"; ObjectID = "o1n-Is-NGk"; */
+"o1n-Is-NGk.segmentTitles[3]" = "PLAY";
+
+/* Class = "IBUISegmentedControl"; o1n-Is-NGk.segmentTitles[4] = "PAUSE"; ObjectID = "o1n-Is-NGk"; */
+"o1n-Is-NGk.segmentTitles[4]" = "PAUSE";
