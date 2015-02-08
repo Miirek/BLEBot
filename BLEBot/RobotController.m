@@ -109,7 +109,7 @@ typedef  NS_ENUM(NSUInteger, PlayerControl) {
     NSString *timestr = [NSString stringWithFormat:@"%02d:%02d:%02d.%02d",hod,min,sec,set];
     [[self duration]setText:timestr];
     
-    NSString *stepCounterVal = [NSString stringWithFormat:@"%lu",[stepsRecorder count]];
+    NSString *stepCounterVal = [NSString stringWithFormat:@"%ld",(long)[stepsRecorder count]];
     [[self stepCounter] setText:stepCounterVal];
 }
 
