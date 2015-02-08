@@ -341,6 +341,11 @@
 				TargetAttributes = {
 					EBE6DCC71A7FD68300D886DB = {
 						CreatedOnToolsVersion = 6.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					EBE6DCE31A7FD68400D886DB = {
 						CreatedOnToolsVersion = 6.1;
@@ -643,6 +648,7 @@
 				EBE6DCF01A7FD68400D886DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EBE6DCF11A7FD68400D886DB /* Build configuration list for PBXNativeTarget "BLEBotTests" */ = {
 			isa = XCConfigurationList;
@@ -651,6 +657,7 @@
 				EBE6DCF31A7FD68400D886DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
