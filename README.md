@@ -5,4 +5,4 @@ It was a gift for my kids, they have assembled it and I made this controller app
 
 ![Robot](https://github.com/Miirek/BLEBot/blob/master/blebot.JPG)
 
-![Screenshot](https://github.com/Miirek/BLEBot/blob/master/bot_app_ss.png)
+![Screenshot](https://github.com/Miirek/BLEBot/blob/master/bot_app_ss@2x.png)
