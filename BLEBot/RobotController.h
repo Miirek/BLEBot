@@ -27,6 +27,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *duration;
 @property (weak, nonatomic) IBOutlet UILabel *stepCounter;
 @property (weak, nonatomic) IBOutlet JSDPad *dPad;
+@property (weak, nonatomic) IBOutlet UIProgressView *playerProgress;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *cPanel;
 - (void)setCentralManager:(CBCentralManager *)centralManager;
 - (void)setConnectdPeri:(CBPeripheral *)connectdPeri;
 @end

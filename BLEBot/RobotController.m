@@ -20,6 +20,7 @@ typedef  NS_ENUM(NSUInteger, PlayerControl) {
     NSMutableArray *stepsRecorder;
     BOOL nowRecording;
     BOOL nowPlaying;
+    BOOL shouldStop;
     NSDate *timer;
     NSTimer *updater;
     RobotStep *currentStep;
@@ -27,7 +28,7 @@ typedef  NS_ENUM(NSUInteger, PlayerControl) {
 
 // RECORDER MODEL
 -(void) playRecordedStepsWithDelays: (BOOL)delays;
--(void) storeRecodFor:(NSString*) command andDuration: (NSInteger) duration;
+//-(void) storeRecodFor:(NSString*) command andDuration: (NSInteger) duration;
 
 // RECORDER API
 -(void)startRecording;
@@ -64,13 +65,13 @@ typedef  NS_ENUM(NSUInteger, PlayerControl) {
 @implementation RobotController
 
 -(void)addRecord:(RobotStep*)rec{
+    if(!nowRecording) {
+        NSLog(@"WTF !!");
+        return;
+    }
     [stepsRecorder addObject:rec];
     [_stepCounter setText:[NSString stringWithFormat:@"%lu",(unsigned long)[stepsRecorder count]]];
     NSLog(@"Record added %@", rec);
-}
-
--(void)storeRecodFor:(NSString *)command andDuration:(NSInteger)duration{
-    
 }
 
 -(void)startRecording{
@@ -79,11 +80,13 @@ typedef  NS_ENUM(NSUInteger, PlayerControl) {
     timer = [NSDate date];
     updater = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
     nowRecording = YES;
+    shouldStop = NO;
     
 }
 
 -(void) stopRecording{
     nowRecording = NO;
+    shouldStop = NO;
     
     if (updater == nil) {
         return;
@@ -97,7 +100,17 @@ typedef  NS_ENUM(NSUInteger, PlayerControl) {
 }
 
 -(void)startPlaying{
+    shouldStop = NO;
+    nowPlaying = YES;
+    
+    [[self dPad] setUserInteractionEnabled:NO];
     [self playRecordedStepsWithDelays:YES];
+}
+
+-(void)stopPlaying{
+    shouldStop = YES;
+    
+    
 }
 
 -(void)updateTimer{
@@ -121,15 +134,28 @@ typedef  NS_ENUM(NSUInteger, PlayerControl) {
 }
 
 -(void)playRecordedStepsWithDelays:(BOOL)delays{
-    if(nowPlaying) return;
     nowPlaying = YES;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    [[self playerProgress] setProgress:0];
+     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        int stepCounter = 0;
+        CGFloat progres;
         for (RobotStep * step in stepsRecorder) {
+            stepCounter++;
             [self sendValue:step.command];
+            progres = (double)stepCounter / (double)stepsRecorder.count;
+            dispatch_sync(dispatch_get_main_queue(), ^{
+            [[self playerProgress] setProgress:progres];
+            });
+            NSLog(@"playing %@ as %d progrees: %f",step.command,stepCounter,progres);
+
             usleep(step.duration*1000000);
+            if(shouldStop) break;
         }
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [self playerDidFinish];
+        });
+
     });
-    nowPlaying = NO;
 }
 
 - (void)setConnectdPeri:(CBPeripheral *)connectdPeri
@@ -162,16 +188,47 @@ typedef  NS_ENUM(NSUInteger, PlayerControl) {
     NSLog(@"SEGMENT: %ld",(long)ctrl.selectedSegmentIndex);
     switch (ctrl.selectedSegmentIndex) {
         case PlayerRec:
+            [ctrl setMomentary:NO];
+            [ctrl setSelectedSegmentIndex:PlayerRec];
+            
+            [ctrl setEnabled:NO forSegmentAtIndex:PlayerPlay];
+            [ctrl setEnabled:NO forSegmentAtIndex:PlayerClear];
+            //[ctrl setEnabled:NO forSegmentAtIndex:PlayerRec];
+
+            [ctrl setEnabled:YES forSegmentAtIndex:PlayerStop];
+
             [self startRecording];
             break;
         case PlayerStop:
-            [self stopRecording];
+            [ctrl setMomentary:YES];
+            
+            if (nowRecording) {
+                [self stopRecording];
+            }
+            if(nowPlaying){
+                [self stopPlaying];
+            }
+            [ctrl setEnabled:YES forSegmentAtIndex:PlayerPlay];
+            [ctrl setEnabled:YES forSegmentAtIndex:PlayerClear];
+            [ctrl setEnabled:YES forSegmentAtIndex:PlayerRec];
+
+            [ctrl setEnabled:NO forSegmentAtIndex:PlayerStop];
             break;
             
         case PlayerPlay:
+            if(nowPlaying) break;
+            if(nowRecording) break;
+            if(stepsRecorder.count == 0) break;
+
+            [ctrl setEnabled:NO forSegmentAtIndex:PlayerPlay];
+            [ctrl setEnabled:NO forSegmentAtIndex:PlayerClear];
+            [ctrl setEnabled:NO forSegmentAtIndex:PlayerRec];
+            [ctrl setEnabled:YES forSegmentAtIndex:PlayerStop];
+
             [self startPlaying];
             break;
         case PlayerClear:
+            [self clearRecorded:self];
             break;
             
         default:
@@ -179,9 +236,29 @@ typedef  NS_ENUM(NSUInteger, PlayerControl) {
     }
 }
 
+-(void)playerDidFinish{
+    UISegmentedControl *ctrl = self.cPanel;
+    
+    nowPlaying = NO;
+    [ctrl setMomentary:YES];
+    
+    [ctrl setEnabled:YES forSegmentAtIndex:PlayerPlay];
+    [ctrl setEnabled:YES forSegmentAtIndex:PlayerClear];
+    [ctrl setEnabled:YES forSegmentAtIndex:PlayerRec];
+    
+    [ctrl setEnabled:NO forSegmentAtIndex:PlayerStop];
+    [[self dPad] setUserInteractionEnabled:YES];
+   
+}
 
 -(void)clearRecorded:(id)sender{
-
+    [stepsRecorder removeAllObjects];
+    NSString *timestr = [NSString stringWithFormat:@"%02d:%02d:%02d.%02d",0,0,0,0];
+    [[self duration]setText:timestr];
+    
+    NSString *stepCounterVal = [NSString stringWithFormat:@"%d",0];
+    [[self stepCounter] setText:stepCounterVal];
+   
 }
 
 -(void)pausePlayer{

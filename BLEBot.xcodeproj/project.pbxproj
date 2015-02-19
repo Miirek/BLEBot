@@ -12,7 +12,6 @@
 		EBE6DCD41A7FD68300D886DB /* RobotController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE6DCD31A7FD68300D886DB /* RobotController.m */; };
 		EBE6DCD71A7FD68300D886DB /* DevicesController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE6DCD61A7FD68300D886DB /* DevicesController.m */; };
 		EBE6DCDA1A7FD68300D886DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DCD81A7FD68300D886DB /* Main.storyboard */; };
-		EBE6DCDC1A7FD68300D886DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DCDB1A7FD68300D886DB /* Images.xcassets */; };
 		EBE6DCDF1A7FD68300D886DB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DCDD1A7FD68300D886DB /* LaunchScreen.xib */; };
 		EBE6DCEB1A7FD68400D886DB /* BLEBotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE6DCEA1A7FD68400D886DB /* BLEBotTests.m */; };
 		EBE6DCF61A8238DD00D886DB /* F3BarGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE6DCF51A8238DD00D886DB /* F3BarGauge.m */; };
@@ -56,6 +55,7 @@
 		EBE6DD591A826C1700D886DB /* bluetooth.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD581A826C1700D886DB /* bluetooth.png */; };
 		EBE6DD601A827A4F00D886DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBE6DD621A827A4F00D886DB /* Localizable.strings */; };
 		EBE6DD991A839E5D00D886DB /* RecorderStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE6DD981A839E5D00D886DB /* RecorderStorage.m */; };
+		EBFF9FD71A8E9BC3009C31A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBFF9FD61A8E9BC3009C31A9 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +79,6 @@
 		EBE6DCD51A7FD68300D886DB /* DevicesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DevicesController.h; sourceTree = "<group>"; };
 		EBE6DCD61A7FD68300D886DB /* DevicesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DevicesController.m; sourceTree = "<group>"; };
 		EBE6DCD91A7FD68300D886DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EBE6DCDB1A7FD68300D886DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EBE6DCDE1A7FD68300D886DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EBE6DCE41A7FD68400D886DB /* BLEBotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLEBotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE6DCE91A7FD68400D886DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -138,6 +137,7 @@
 		EBE6DD981A839E5D00D886DB /* RecorderStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecorderStorage.m; sourceTree = "<group>"; };
 		EBE6DD9B1A83A8D100D886DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		EBE6DD9C1A83A8DC00D886DB /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Main.strings; sourceTree = "<group>"; };
+		EBFF9FD61A8E9BC3009C31A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = BLEBot/Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +161,7 @@
 		EBE6DCBF1A7FD68300D886DB = {
 			isa = PBXGroup;
 			children = (
+				EBFF9FD61A8E9BC3009C31A9 /* Images.xcassets */,
 				EBE6DCCA1A7FD68300D886DB /* BLEBot */,
 				EBE6DCE71A7FD68400D886DB /* BLEBotTests */,
 				EBE6DCC91A7FD68300D886DB /* Products */,
@@ -189,7 +190,6 @@
 				EBE6DCF41A8238DD00D886DB /* F3BarGauge.h */,
 				EBE6DCF51A8238DD00D886DB /* F3BarGauge.m */,
 				EBE6DCD81A7FD68300D886DB /* Main.storyboard */,
-				EBE6DCDB1A7FD68300D886DB /* Images.xcassets */,
 				EBE6DCDD1A7FD68300D886DB /* LaunchScreen.xib */,
 				EBE6DCCB1A7FD68300D886DB /* Supporting Files */,
 				EBE6DD971A839E5D00D886DB /* RecorderStorage.h */,
@@ -385,6 +385,7 @@
 				EBE6DD2D1A82393800D886DB /* analogue_handle@2x.png in Resources */,
 				EBE6DCDF1A7FD68300D886DB /* LaunchScreen.xib in Resources */,
 				EBE6DD321A82393800D886DB /* Default-568h@2x.png in Resources */,
+				EBFF9FD71A8E9BC3009C31A9 /* Images.xcassets in Resources */,
 				EBE6DD3A1A82393800D886DB /* dPad-DownRight@2x.png in Resources */,
 				EBE6DD401A82393800D886DB /* dPad-Right@2x.png in Resources */,
 				EBE6DD601A827A4F00D886DB /* Localizable.strings in Resources */,
@@ -398,7 +399,6 @@
 				EBE6DD2A1A82393800D886DB /* analogue_bg.png in Resources */,
 				EBE6DD2F1A82393800D886DB /* button-pressed@2x.png in Resources */,
 				EBE6DD361A82393800D886DB /* dPad-Down@2x.png in Resources */,
-				EBE6DCDC1A7FD68300D886DB /* Images.xcassets in Resources */,
 				EBE6DD451A82393800D886DB /* dPad-UpRight.png in Resources */,
 				EBE6DD3B1A82393800D886DB /* dPad-Left.png in Resources */,
 				EBE6DD341A82393800D886DB /* Default@2x.png in Resources */,

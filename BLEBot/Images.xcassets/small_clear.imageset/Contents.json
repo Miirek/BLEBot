@@ -3,16 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "bot.png"
+      "filename" : "small_clear.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "bot@2x.png"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
+      "filename" : "small_clear@2x.png"
     }
   ],
   "info" : {

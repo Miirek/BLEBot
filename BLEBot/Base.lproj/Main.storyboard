@@ -26,7 +26,7 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="imF-5Q-UKd" customClass="JSDPad">
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="imF-5Q-UKd" customClass="JSDPad">
                                 <rect key="frame" x="150" y="190" width="300" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -69,25 +69,28 @@
                                     <constraint firstAttribute="width" constant="300" id="Y1w-91-abf"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="REC"/>
-                                    <segment title="STOP"/>
-                                    <segment title="CLEAR"/>
-                                    <segment title="PLAY"/>
-                                    <segment title="PAUSE"/>
+                                    <segment title="" image="small_record"/>
+                                    <segment title="" image="small_stop"/>
+                                    <segment title="" image="small_clear"/>
+                                    <segment title="" image="small_play"/>
                                 </segments>
                                 <connections>
                                     <action selector="recorderControl:" destination="9pv-A4-QxB" eventType="valueChanged" id="Zj0-Qm-eKR"/>
                                 </connections>
                             </segmentedControl>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mgZ-sK-4rY">
+                                <rect key="frame" x="150" y="132" width="300" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="mgZ-sK-4rY" firstAttribute="centerX" secondItem="4DY-dG-YyZ" secondAttribute="centerX" id="0xj-gn-P12"/>
                             <constraint firstItem="4DY-dG-YyZ" firstAttribute="centerX" secondItem="Po5-R4-F6R" secondAttribute="centerX" id="2Er-c7-fwC"/>
                             <constraint firstItem="4DY-dG-YyZ" firstAttribute="centerX" secondItem="imF-5Q-UKd" secondAttribute="centerX" id="4gg-pg-gLe"/>
-                            <constraint firstItem="imF-5Q-UKd" firstAttribute="leading" secondItem="o1n-Is-NGk" secondAttribute="leading" id="Cdm-Kf-q8J"/>
+                            <constraint firstItem="mgZ-sK-4rY" firstAttribute="bottom" secondItem="4DY-dG-YyZ" secondAttribute="bottom" id="83h-fe-xOj"/>
                             <constraint firstItem="imF-5Q-UKd" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="LI5-5V-AlW"/>
                             <constraint firstItem="4DY-dG-YyZ" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" constant="106" id="Uja-nP-4rk"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="imF-5Q-UKd" secondAttribute="bottom" constant="61" id="YlC-79-bJV"/>
+                            <constraint firstItem="mgZ-sK-4rY" firstAttribute="leading" secondItem="o1n-Is-NGk" secondAttribute="leading" id="eMF-L7-nSa"/>
                             <constraint firstItem="4DY-dG-YyZ" firstAttribute="top" secondItem="o1n-Is-NGk" secondAttribute="bottom" constant="8" symbolic="YES" id="eTm-CY-lTf"/>
                             <constraint firstItem="imF-5Q-UKd" firstAttribute="top" secondItem="4DY-dG-YyZ" secondAttribute="bottom" constant="56" id="h9E-QO-b0R"/>
                             <constraint firstItem="imF-5Q-UKd" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" constant="190" id="hJK-Vv-tsM"/>
@@ -97,9 +100,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Robot control" image="bot" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="cPanel" destination="o1n-Is-NGk" id="lb3-3V-WNg"/>
                         <outlet property="dPad" destination="imF-5Q-UKd" id="7Az-p4-EyE"/>
                         <outlet property="devState" destination="Po5-R4-F6R" id="QwJ-Jh-10m"/>
                         <outlet property="duration" destination="bvY-ac-0yt" id="3GQ-9W-6Lk"/>
+                        <outlet property="playerProgress" destination="mgZ-sK-4rY" id="gsA-Qa-Xa8"/>
                         <outlet property="stepCounter" destination="0nW-b6-5tO" id="XSg-NV-213"/>
                     </connections>
                 </viewController>
@@ -203,5 +208,9 @@
         <image name="bot" width="22" height="22"/>
         <image name="bt" width="22" height="22"/>
         <image name="rec" width="22" height="22"/>
+        <image name="small_clear" width="16" height="16"/>
+        <image name="small_play" width="16" height="16"/>
+        <image name="small_record" width="16" height="10"/>
+        <image name="small_stop" width="16" height="16"/>
     </resources>
 </document>
