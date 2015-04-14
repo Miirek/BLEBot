@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>5E684206-F9A8-42E3-9463-A3CCE242E372</string>
 	<key>IDESourceControlProjectName</key>
-	<string>BLEBot</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>A715A33BAA8BC9A4FB6FF0519273F5641E2A103A</key>
 		<string>https://github.com/Miirek/BLEBot.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>BLEBot.xcodeproj</string>
+	<string>BLEBot.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A715A33BAA8BC9A4FB6FF0519273F5641E2A103A</key>

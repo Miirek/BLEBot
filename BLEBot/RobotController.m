@@ -15,6 +15,12 @@ typedef  NS_ENUM(NSUInteger, PlayerControl) {
     PlaerPause
 };
 
+@interface NSString (util)
+
+- (int) indexOf:(NSString *)text;
+
+@end
+
 @interface RobotController (){
     NSMutableArray *_pressedButtons;
     NSMutableArray *stepsRecorder;
@@ -24,6 +30,7 @@ typedef  NS_ENUM(NSUInteger, PlayerControl) {
     NSDate *timer;
     NSTimer *updater;
     RobotStep *currentStep;
+    NSMutableString *commandBuffer;
 }
 
 // RECORDER MODEL
@@ -62,6 +69,19 @@ typedef  NS_ENUM(NSUInteger, PlayerControl) {
 }
 @end
 
+@implementation NSString (util)
+
+- (int) indexOf:(NSString *)text {
+    NSRange range = [self rangeOfString:text];
+    if ( range.length > 0 ) {
+        return range.location;
+    } else {
+        return -1;
+    }
+}
+
+@end
+
 @implementation RobotController
 
 -(void)addRecord:(RobotStep*)rec{
@@ -97,7 +117,7 @@ typedef  NS_ENUM(NSUInteger, PlayerControl) {
         updater = nil;
         updater = nil;
     }
-}
+} 
 
 -(void)startPlaying{
     shouldStop = NO;
@@ -131,6 +151,7 @@ typedef  NS_ENUM(NSUInteger, PlayerControl) {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.devState.text = NSLocalizedString(@"devState.disconnected", nil);
+    commandBuffer = [[NSMutableString alloc] init];
 }
 
 -(void)playRecordedStepsWithDelays:(BOOL)delays{
@@ -288,8 +309,21 @@ typedef  NS_ENUM(NSUInteger, PlayerControl) {
 -(void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error
 {
     NSString * str = [[NSString alloc] initWithData:[characteristic value] encoding:NSUTF8StringEncoding];
+    
+    [commandBuffer appendString:str];
+    if ([str containsString:@"\r\n"]) {
+        NSArray *list = [commandBuffer componentsSeparatedByString:@"\r\n"];
+        
+        for (int i =0; i<[list count] -1; i++) {
+            [self parseCommand:[list objectAtIndex:i]];
+        }
+        
+        NSString *rest = [list lastObject];
+        [commandBuffer setString:rest];
+        //NSLog(@"BOT-REST: %@",rest);
+    }
  //   self.bleOut.text = [NSString stringWithFormat:@"%@\n%@", self.bleOut.text, str];
-    NSLog(@"BOT: %@",str);
+    //NSLog(@"BOT: %@",str);
 }
 
 
@@ -303,7 +337,9 @@ typedef  NS_ENUM(NSUInteger, PlayerControl) {
    
 }
 
-
+-(void) parseCommand :(NSString *)command{
+    NSLog(@"RECEIVED: %@",command);
+}
 
 #pragma mark - JSDPadDelegate
 
